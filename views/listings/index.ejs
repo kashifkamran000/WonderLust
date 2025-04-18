@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+<style>
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card-link {
+    display: flex;
+    flex-grow: 1;
+    text-decoration: none;
+}
+
+.card {
+    margin: 2rem;
+}
+</style>
+<body>
+  <h3>All Listing</h3>
+
+  <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+      <% for (listing of allListing) { %>
+          <div class="col d-flex align-items-stretch">
+              <a href="/listings/<%=listing._id%>" class="card-link">
+                  <div class="card" style="width: 100%;">
+                      <img src="<%=listing.image.url%>" class="card-img-top" alt="listing_image" style="height: 20rem;">
+                      <div class="card-img-overlay"></div>
+                      <div class="card-body" style="padding: 0%;">
+                          <p class="card-text" style="font-weight: 200;">
+                              <b><%= listing.title %></b> <br>
+                              &#x20B9;<%= listing.price.toLocaleString("en-IN") %>/night
+                          </p>
+                      </div>
+                  </div>
+              </a>
+          </div>
+      <%}%>
+  </div>
+  
+
+</body>

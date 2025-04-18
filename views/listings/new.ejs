@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+<body>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h2>Create new listing:</h2><br>
+            <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+                
+                <div>
+                    <label for="title" class="form-label">Title:</label>
+                    <input type="text" name="title" id="title" placeholder="Title" class="form-control" required>
+                    <div class="valid-feedback">Looks Good!</div>
+                    <div class="invalid-feedback">Please enter title!</div>
+                </div><br>
+                
+                <div>
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea name="description" id="description" placeholder="Please describe!" class="form-control" required></textarea>
+                    <div class="valid-feedback">Nice Description!</div>
+                    <div class="invalid-feedback">Please enter description!</div>
+                </div><br>
+
+                <div>
+                    <label for="listing[image]" class="form-label">Upload Image:</label>
+                    <input type="file" name="listing[image]" class="form-control" required>
+                </div><br>
+                
+                <div>
+                    <label for="price" class="form-label">Price:</label>
+                    <input name="price" placeholder="Price" class="form-control" required>
+                    <div class="invalid-feedback">Please enter a valid price.</div>
+                </div><br>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <label for="location" class="form-label">Location:</label>
+                        <input type="text" placeholder="Location" name="location" class="form-control" required>
+                        <div class="valid-feedback">Looks Good!</div>
+                    </div><br>
+                    
+                    <div class="col-6">
+                        <label for="country" class="form-label">Country:</label>
+                        <input type="text" placeholder="Country" name="country" class="form-control" required>
+                        <div class="valid-feedback">Looks Good!</div>
+                    </div><br>
+                </div><br>
+                
+                <button class="btn btn-dark" style="background-color: #FF385C; border: none;">Add</button>
+            
+            </form>
+        </div>
+    </div>
+</body>

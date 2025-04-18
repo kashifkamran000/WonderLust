@@ -1,0 +1,37 @@
+<% layout("/layouts/boilerplate.ejs") -%>
+<div class="card " style="width: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)" >
+    <div class="card-body" style="width: 27rem; border: 0.2px solid rgb(224, 224, 224); border-radius: 0.5rem; box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;">
+      <br><h4 class="card-title">WonderLust SignUp</h4><br>
+      <form action="/signup" method="POST" novalidate class="needs-validation">
+
+        <div>
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" name="email" id="email" placeholder="email" class="form-control" required>
+        <div class="valid-feedback">Looks Good!</div>
+        <div class="invalid-feedback">Please enter Email!</div>
+        </div><br>
+
+        <div>
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" name="username" id="username" placeholder="username" class="form-control" required>
+        <div class="valid-feedback">Looks Good!</div>
+        <div class="invalid-feedback">Please enter username</div>
+        </div><br>
+
+        <div>
+        <label for="password" class="form-label">Password:</label>
+        <input type="password" name="password" id="password" placeholder="password" class="form-control" required>
+        <div class="valid-feedback">Looks Good!</div>
+        <div class="invalid-feedback">Please enter Password</div>
+        </div><br>
+        <div style="display: flex; flex-direction: column;">
+        <button class="btn btn-primary" style="background-color: #FF385C; border: none;">SignUp</button>
+        
+       </div>
+        <br>
+      </form>
+    </div>
+  </div>
+
+
+  
